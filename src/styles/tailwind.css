@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex flex-col min-h-screen bg-gray-100;
+}
+
+.darkmode {
+  @apply text-white bg-zinc-800;
+}
+
+.hidden {
+  display: none;
+}
+
+.team > div > img {
+  @apply mx-auto mb-2 rounded-full;
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1/1;
+}
+.team > div > h2 {
+  @apply text-lg font-semibold;
+}
+.team > div > button {
+  @apply px-4 py-2 mt-2 text-red-700 rounded hover:text-red-900;
+}
+.team > div > p {
+  @apply mt-2;
+}
+
+section {
+  @apply w-3/4 p-6 bg-white rounded-lg shadow-md;
+}
+
+.darkmode section {
+  @apply bg-zinc-900;
+}
+
+input {
+  @apply w-full px-3 py-2 border rounded;
+}
+
+.darkmode input {
+  @apply bg-zinc-800 border-zinc-800;
+}
+
+label {
+  @apply block font-medium;
+}
+
+th,
+td {
+  @apply px-4 py-2 border;
+}
+
+.darkmode th,
+.darkmode td {
+  @apply border-zinc-800;
+}
+
+.button {
+  @apply px-4 py-2 text-white bg-red-700 rounded hover:bg-red-900;
+}
+
+footer img {
+  @apply w-5 h-5;
+  aspect-ratio: 1/1;
+}

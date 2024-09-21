@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Csapat</title>
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="./scripts/common.js" defer></script>
+    <script src="./scripts/team.js" defer></script>
+  </head>
+  <body>
+    <!--Task 1-->
+    <header></header>
+    <div class="flex flex-col items-center flex-1 gap-4 m-8">
+      <section class="text-center">
+        <h1 class="mb-4 text-4xl font-semibold">M&amp;M</h1>
+        <p class="mb-2">Iskola: Győri SZC Bolyai János Technikum</p>
+        <p class="mb-4">Felkészítő tanár: Kovács Ádám</p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 team">
+          <div>
+            <img src="./imgs/milan.jpg" alt="Csapattag 1" />
+            <h2>Artner Milan</h2>
+            <button onclick="toggleBio(1)">Bemutatkozás</button>
+            <p id="bio-1" hidden>Csapattag 1 bemutatkozó szöveg...</p>
+          </div>
+          <div>
+            <img src="./imgs/tamas.jpg" alt="Csapattag 2" />
+            <h2>Csendes Tamas</h2>
+            <button onclick="toggleBio(2)">Bemutatkozás</button>
+            <p id="bio-2" hidden>Csapattag 2 bemutatkozó szöveg...</p>
+          </div>
+          <div>
+            <img src="./imgs/martin.jpeg" alt="Csapattag 3" />
+            <h2>Szabo Martin</h2>
+            <button onclick="toggleBio(3)">Bemutatkozás</button>
+            <p id="bio-3" hidden>Csapattag 3 bemutatkozó szöveg...</p>
+          </div>
+        </div>
+      </section>
+      <section class="text-center">
+        <h2 class="mb-4 text-xl font-semibold">Aktuális Idő</h2>
+        <p id="clock" class="font-mono text-2xl">00:00:00</p>
+      </section>
+      <section class="text-center">
+        <h2 class="mb-4 text-xl font-semibold">Extra Képek</h2>
+        <button class="button" onclick="showNextImage()">Kép Megjelenítése</button>
+        <img id="extra-image" src="./imgs/1920x1080.png" alt="Extra kép" class="hidden mx-auto mb-4" />
+      </section>
+    </div>
+    <footer></footer>
+  </body>
+</html>

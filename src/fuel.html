@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tankolás</title>
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="./scripts/common.js" defer></script>
+    <script src="./scripts/fuel.js" defer></script>
+  </head>
+  <body>
+    <!--Task 2-->
+    <header></header>
+    <div class="flex flex-col items-center flex-1 gap-4 m-8">
+      <section>
+        <h2 class="mb-4 text-xl font-semibold">Tankolás rögzítése</h2>
+        <form id="fuelForm" class="grid grid-cols-1 gap-4 md:grid-cols-4">
+          <div>
+            <label for="date">Dátum:</label>
+            <input type="date" id="date" required />
+          </div>
+          <div>
+            <label for="amount">Tankolt mennyiség (liter):</label>
+            <input type="number" id="amount" min="0" step="0.01" required />
+          </div>
+          <div>
+            <label for="cost">Fizetett összeg (Ft):</label>
+            <input type="number" id="cost" min="0" step="1" required />
+          </div>
+          <div>
+            <label for="odometer">Kilométeróra állása:</label>
+            <input type="number" id="odometer" min="0" required />
+          </div>
+          <div class="text-center md:col-span-4">
+            <button type="submit" class="mt-4 button">Tankolás hozzáadása</button>
+          </div>
+        </form>
+      </section>
+      <section>
+        <h2 class="mb-4 text-xl font-semibold">Tankolások szűrése</h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div>
+            <label for="startDate">Kezdő dátum:</label>
+            <input type="date" id="startDate" />
+          </div>
+          <div>
+            <label for="endDate">Vég dátum:</label>
+            <input type="date" id="endDate" />
+          </div>
+          <div class="text-center md:col-span-2">
+            <button onclick="filterFuelData()" class="mt-4 button">Szűrés</button>
+            <button onclick="removeFilter()" class="mt-4 button">Szűrés törlése</button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2 class="mb-4 text-xl font-semibold">Tankolások listája</h2>
+        <div class="my-4 text-center">
+          <button onclick="toggleSortMode()" class="button">Rendezés: <span id="sortModeLabel">Dátum</span></button>
+        </div>
+        <div id="fuelList" class="overflow-x-auto"></div>
+      </section>
+      <section>
+        <h2 class="mb-4 text-xl font-semibold">Havi összesítés</h2>
+        <div id="monthlySummary"></div>
+      </section>
+    </div>
+    <footer></footer>
+  </body>
+</html>
