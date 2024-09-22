@@ -6,11 +6,11 @@ loadDarkmode();
 function toggleDarkmode(): void {
   darkmode = !darkmode;
   localStorage.setItem('darkmode', darkmode ? '1' : '0');
-  document.querySelector('body')!.classList.remove('darkmode');
+  document.querySelector('body')!.dataset.darkmode = String(darkmode);
   loadDarkmode();
 }
 
 function loadDarkmode(): void {
-  if (darkmode) document.querySelector('body')!.classList.add('darkmode');
+  if (darkmode) document.querySelector('body')!.dataset.darkmode = String(darkmode);
   (document.querySelector('footer img') as HTMLImageElement).src = `./imgs/${darkmode ? 'sun' : 'moon'}.png`;
 }

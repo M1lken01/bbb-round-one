@@ -4,9 +4,9 @@
   "scripts": {
     "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles/global.css",
     "build:assets": "node bundle.js",
-    "build:components": "node build.js",
+    "build:html": "node build.js",
     "build:scripts": "tsc",
-    "build": "npm run build:assets && npm run build:components && npm run build:scripts && npm run build:css"
+    "build": "npm run build:assets && npm run build:html && npm run build:scripts && npm run build:css"
   },
   "devDependencies": {
     "@types/node": "^22.5.5",
