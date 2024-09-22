@@ -27,7 +27,7 @@ body {
 }
 
 section {
-  @apply w-3/4 p-6 bg-white rounded-lg shadow-md;
+  @apply w-full p-6 bg-white rounded-lg shadow-md md:w-3/4;
 }
 
 [data-darkmode='true'] section {
@@ -70,6 +70,7 @@ footer img {
 }
 
 .easteregg {
+  font-weight: bold;
   text-shadow: 0 0 5px #7f2fffa1, 0 0 10px #7f2fffa1, 0 0 15px #7f2fffa1, 0 0 20px #7f2fffa1;
   background: linear-gradient(90deg, #7f2fff 30%, #e907a1, #7f2fff 70%);
   background-size: 200% 200%;
