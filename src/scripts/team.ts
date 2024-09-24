@@ -11,12 +11,16 @@ function toggleBio(index: number): void {
   bio.hidden = !bio.hidden;
 }
 
-const images = ['600x400.png', '600x400.png', '600x400.png'];
+const images = [
+  'https://gyor-bolyai-alt.cms.intezmeny.edir.hu/uploads/bolyaiiskola_ec0f79270b.jpg',
+  'https://cms.gyori.szc.edir.hu/uploads/081127_Bolyaitech_iskolaepulet_6b6dc9aab1.JPG',
+  'https://gyor-bolyai-alt.cms.intezmeny.edir.hu/uploads/Screenshot_32_3dbb8b138a.png',
+];
 let currentImageIndex = -1;
 
 function showNextImage(): void {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   const imgElement = document.getElementById('extra-image') as HTMLImageElement;
-  imgElement.src = `./imgs/${images[currentImageIndex]}`;
+  imgElement.src = images[currentImageIndex];
   imgElement.classList.remove('hidden');
 }
